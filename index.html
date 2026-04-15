@@ -383,7 +383,12 @@
     }
 
     /* ===== SOBRE ===== */
-    #sobre { background: var(--cinza-claro); }
+    #sobre {
+      background:
+        linear-gradient(rgba(245,245,245,0.92), rgba(245,245,245,0.92)),
+        url('images/mecanica1.jpg') center / cover no-repeat;
+      background-attachment: scroll, fixed;
+    }
 
     .sobre-grid {
       display: grid;
@@ -477,7 +482,10 @@
 
     /* ===== MVV ===== */
     #mvv {
-      background: linear-gradient(180deg, var(--preto-soft) 0%, #1C1C1C 100%);
+      background:
+        linear-gradient(rgba(10,10,10,0.82), rgba(20,20,20,0.84)),
+        url('images/mecanicacaminhao.jpg') center / cover no-repeat;
+      background-attachment: scroll, fixed;
       position: relative;
     }
     #mvv::before {
@@ -540,7 +548,12 @@
     .valor-item p { color: rgba(255,255,255,.52); font-size: 0.84rem; line-height: 1.6; }
 
     /* ===== SERVIÇOS ===== */
-    #servicos { background: var(--branco); }
+    #servicos {
+      background:
+        linear-gradient(rgba(255,255,255,0.93), rgba(255,255,255,0.93)),
+        url('images/ferramentas.jpg') center / cover no-repeat;
+      background-attachment: scroll, fixed;
+    }
 
     .servicos-grid {
       display: grid;
@@ -614,36 +627,92 @@
       padding: 4px 12px; border-radius: 50px; margin-top: 12px;
     }
 
-    /* ===== GALERIA ===== */
+    /* ===== GALERIA — CAROUSEL ===== */
     #galeria { background: var(--cinza-claro); }
 
-    .galeria-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-    .galeria-item {
+    .carousel-wrap {
+      position: relative;
       border-radius: var(--radius);
       overflow: hidden;
-      aspect-ratio: 4/3;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.18);
       background: var(--cinza-escuro);
-      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+      user-select: none;
     }
-    .galeria-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
-    .galeria-item:hover img { transform: scale(1.05); }
-
-    .galeria-placeholder {
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+      will-change: transform;
+    }
+    .carousel-slide {
+      min-width: 100%;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .carousel-slide img {
       width: 100%; height: 100%;
-      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
-      color: rgba(255,255,255,.22);
-      background: linear-gradient(135deg, #1A1A1A 0%, #262626 100%);
+      object-fit: cover;
+      display: block;
     }
-    .galeria-placeholder i    { font-size: 2rem; }
-    .galeria-placeholder span { font-family: var(--ff-c); font-size: 0.83rem; letter-spacing: 1px; }
+    .car-btn {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      width: 44px; height: 44px;
+      background: rgba(10,10,10,0.65);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; color: var(--branco);
+      cursor: pointer;
+      transition: background .2s, border-color .2s;
+      z-index: 10;
+    }
+    .car-btn:hover { background: var(--laranja); border-color: var(--laranja); }
+    .car-btn:focus-visible { outline: 3px solid var(--laranja); outline-offset: 2px; }
+    .car-prev { left: 14px; }
+    .car-next { right: 14px; }
+    .car-dots {
+      position: absolute;
+      bottom: 14px; left: 50%;
+      transform: translateX(-50%);
+      display: flex; gap: 8px;
+      z-index: 10;
+    }
+    .car-dot {
+      width: 8px; height: 8px;
+      background: rgba(255,255,255,0.35);
+      border-radius: 50%;
+      cursor: pointer;
+      border: none;
+      transition: background .25s, transform .25s;
+    }
+    .car-dot.active { background: var(--laranja); transform: scale(1.35); }
+
+    .car-counter {
+      position: absolute;
+      top: 12px; right: 14px;
+      background: rgba(10,10,10,0.60);
+      color: rgba(255,255,255,0.85);
+      font-family: var(--ff-c);
+      font-size: 0.80rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 50px;
+      z-index: 10;
+    }
+
+    @media (max-width: 599px) {
+      .car-btn { width: 36px; height: 36px; font-size: 0.85rem; }
+    }
 
     /* ===== DEPOIMENTOS ===== */
     #depoimentos {
-      background: linear-gradient(180deg, var(--preto-soft) 0%, var(--preto) 100%);
+      background:
+        linear-gradient(rgba(10,10,10,0.82), rgba(10,10,10,0.84)),
+        url('images/mecanica.jpg') center / cover no-repeat;
+      background-attachment: scroll, fixed;
     }
     .depoimentos-grid {
       display: grid;
@@ -851,6 +920,11 @@
     }
 
     @media (max-width: 1024px) {
+      /* Desativa parallax em iOS/Android */
+      #sobre, #servicos, #mvv, #depoimentos {
+        background-attachment: scroll, scroll;
+      }
+
       .nav-links { display: none; }
       .hamburger { display: flex; }
 
@@ -873,7 +947,6 @@
       .mvv-valores { grid-template-columns: 1fr 1fr; }
 
       .produtos-grid     { grid-template-columns: 1fr 1fr; }
-      .galeria-grid      { grid-template-columns: 1fr 1fr; }
       .depoimentos-grid  { grid-template-columns: 1fr 1fr; }
       .contato-grid      { grid-template-columns: 1fr; gap: 40px; }
       .footer-inner      { grid-template-columns: 1fr 1fr; }
@@ -904,7 +977,6 @@
       .servicos-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
       .servico-card { padding: 22px 14px; }
       .produtos-grid { grid-template-columns: 1fr 1fr; }
-      .galeria-grid  { grid-template-columns: 1fr 1fr; }
       .wpp-cards { grid-template-columns: 1fr; }
       .whatsapp-float { bottom: 20px; right: 20px; }
       .scroll-top     { bottom: 84px; right: 20px; }
@@ -1284,31 +1356,36 @@
       <h2 id="galeria-titulo" class="section-title fade-up">Trabalhos realizados</h2>
       <p class="section-desc fade-up">Confira alguns dos nossos serviços e a estrutura da Mecânica Mella.</p>
 
-      <div class="galeria-grid">
-        <div class="galeria-item fade-scale">
-          <img src="images/foto-1.jpg" alt="Mecânica Mella — serviço realizado 1"
-               onerror="this.parentElement.innerHTML='<div class=\'galeria-placeholder\'><i class=\'fa-solid fa-image\'></i><span>Foto em breve</span></div>'">
+      <div class="carousel-wrap fade-up" role="region" aria-label="Galeria de trabalhos">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide">
+            <img src="images/midia_1.jpg" alt="Mecânica Mella — trabalho realizado 1">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/midia_2.jpg" alt="Mecânica Mella — trabalho realizado 2">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/midia_3.jpg" alt="Mecânica Mella — trabalho realizado 3">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/midia_4.jpg" alt="Mecânica Mella — trabalho realizado 4">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/midia_5.jpg" alt="Mecânica Mella — trabalho realizado 5">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/midia_6.jpg" alt="Mecânica Mella — trabalho realizado 6">
+          </div>
         </div>
-        <div class="galeria-item fade-scale">
-          <img src="images/foto-2.jpg" alt="Mecânica Mella — serviço realizado 2"
-               onerror="this.parentElement.innerHTML='<div class=\'galeria-placeholder\'><i class=\'fa-solid fa-image\'></i><span>Foto em breve</span></div>'">
-        </div>
-        <div class="galeria-item fade-scale">
-          <img src="images/foto-3.jpg" alt="Mecânica Mella — serviço realizado 3"
-               onerror="this.parentElement.innerHTML='<div class=\'galeria-placeholder\'><i class=\'fa-solid fa-image\'></i><span>Foto em breve</span></div>'">
-        </div>
-        <div class="galeria-item fade-scale">
-          <img src="images/foto-4.jpg" alt="Mecânica Mella — serviço realizado 4"
-               onerror="this.parentElement.innerHTML='<div class=\'galeria-placeholder\'><i class=\'fa-solid fa-image\'></i><span>Foto em breve</span></div>'">
-        </div>
-        <div class="galeria-item fade-scale">
-          <img src="images/foto-5.jpg" alt="Mecânica Mella — serviço realizado 5"
-               onerror="this.parentElement.innerHTML='<div class=\'galeria-placeholder\'><i class=\'fa-solid fa-image\'></i><span>Foto em breve</span></div>'">
-        </div>
-        <div class="galeria-item fade-scale">
-          <img src="images/foto-6.jpg" alt="Mecânica Mella — serviço realizado 6"
-               onerror="this.parentElement.innerHTML='<div class=\'galeria-placeholder\'><i class=\'fa-solid fa-image\'></i><span>Foto em breve</span></div>'">
-        </div>
+
+        <button class="car-btn car-prev" id="carPrev" aria-label="Slide anterior">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="car-btn car-next" id="carNext" aria-label="Próximo slide">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <div class="car-dots" id="carDots" role="tablist" aria-label="Navegação de slides"></div>
+        <div class="car-counter" id="carCounter" aria-live="polite">1 / 6</div>
       </div>
     </div>
   </section>
@@ -1566,6 +1643,55 @@
     }, { passive: true });
 
     scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ===== CAROUSEL =====
+    (function() {
+      const track   = document.getElementById('carouselTrack');
+      const dotsEl  = document.getElementById('carDots');
+      const counter = document.getElementById('carCounter');
+      if (!track) return;
+
+      const slides = track.querySelectorAll('.carousel-slide');
+      const total  = slides.length;
+      let cur = 0, timer;
+
+      // Cria dots
+      slides.forEach((_, i) => {
+        const d = document.createElement('button');
+        d.className = 'car-dot' + (i === 0 ? ' active' : '');
+        d.setAttribute('role', 'tab');
+        d.setAttribute('aria-label', 'Slide ' + (i + 1));
+        d.addEventListener('click', () => goTo(i));
+        dotsEl.appendChild(d);
+      });
+
+      function goTo(n) {
+        dotsEl.querySelectorAll('.car-dot')[cur].classList.remove('active');
+        cur = ((n % total) + total) % total;
+        track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+        dotsEl.querySelectorAll('.car-dot')[cur].classList.add('active');
+        if (counter) counter.textContent = (cur + 1) + ' / ' + total;
+        resetTimer();
+      }
+
+      function resetTimer() {
+        clearInterval(timer);
+        timer = setInterval(() => goTo(cur + 1), 4500);
+      }
+
+      document.getElementById('carPrev').addEventListener('click', () => goTo(cur - 1));
+      document.getElementById('carNext').addEventListener('click', () => goTo(cur + 1));
+
+      // Swipe suporte touch
+      let touchStartX = 0;
+      track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend',   e => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) goTo(diff > 0 ? cur + 1 : cur - 1);
+      }, { passive: true });
+
+      resetTimer();
+    })();
 
     // ===== REVEAL ANIMATIONS =====
     const animEls = document.querySelectorAll('.fade-up, .fade-left, .fade-right, .fade-scale');
