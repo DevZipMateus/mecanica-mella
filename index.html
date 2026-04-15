@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mecânica Mella — Especialistas em Veículos Pesados</title>
+  <meta name="description" content="Mecânica Mella: especialistas em suspensão, freios, feixes de molas, soldas e linha amarela em Maravilha-SC. Honestidade, agilidade e preço justo para caminhões, carretas e máquinas.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Mecânica Mella">
+  <meta name="theme-color" content="#F0922B">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mecânica Mella — Especialistas em Veículos Pesados">
+  <meta property="og:description" content="Suspensão, freios, soldas e linha amarela em Maravilha-SC. Trabalho com honestidade e agilidade!">
+  <meta property="og:image" content="images/og-image.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mecânica Mella — Especialistas em Veículos Pesados">
+  <meta name="twitter:description" content="Especialistas em suspensão, freios, soldas e linha amarela em Maravilha-SC.">
+  <meta name="twitter:image" content="images/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;500;600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --preto:        #0A0A0A;
+      --preto-soft:   #141414;
+      --cinza-escuro: #1E1E1E;
+      --cinza-medio:  #2A2A2A;
+      --laranja:      #F0922B;
+      --laranja-esc:  #C97820;
+      --laranja-cla:  #FFB347;
+      --azul:         #1565C0;
+      --azul-esc:     #0D4F8A;
+      --verde:        #27AE60;
+      --branco:       #FFFFFF;
+      --cinza-claro:  #F5F5F5;
+      --cinza:        #E8E8E8;
+      --texto:        #1A1A1A;
+      --texto-leve:   #666666;
+      --sombra:       0 4px 24px rgba(0,0,0,0.13);
+      --radius:       12px;
+      --ff-d:  'Bebas Neue', sans-serif;
+      --ff-c:  'Barlow Condensed', sans-serif;
+      --ff-b:  'Barlow', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--ff-b);
+      color: var(--texto);
+      background: var(--branco);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a   { text-decoration: none; color: inherit; }
+    h1, h2, h3, h4 { line-height: 1.2; }
+
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+    section { padding: 96px 0; }
+
+    /* ===== SECTION TAG ===== */
+    .section-tag {
+      display: block;
+      width: fit-content;
+      margin: 0 auto 12px;
+      background: rgba(240,146,43,0.13);
+      color: var(--laranja);
+      font-family: var(--ff-c);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 50px;
+      border: 1px solid rgba(240,146,43,0.28);
+    }
+    .section-tag-dark {
+      background: rgba(240,146,43,0.18);
+      color: var(--laranja-cla);
+      border-color: rgba(240,146,43,0.35);
+    }
+    .section-tag-left { margin: 0 0 12px; }
+
+    .section-title {
+      font-family: var(--ff-d);
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--texto);
+      text-align: center;
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+    }
+    .section-title-dark { color: var(--branco); }
+
+    .section-desc {
+      text-align: center;
+      color: var(--texto-leve);
+      max-width: 620px;
+      margin: 0 auto 56px;
+      font-size: 1.03rem;
+    }
+    .section-desc-dark { color: rgba(255,255,255,0.62); }
+
+    /* ===== BOTÕES ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      border-radius: 6px;
+      font-family: var(--ff-c);
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: background .25s, color .25s, border-color .25s, transform .2s, box-shadow .25s;
+    }
+    .btn:focus-visible { outline: 3px solid var(--laranja); outline-offset: 3px; }
+
+    .btn-laranja { background: var(--laranja); color: var(--branco); border-color: var(--laranja); }
+    .btn-laranja:hover { background: var(--laranja-esc); border-color: var(--laranja-esc); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(240,146,43,.35); }
+
+    .btn-white-outline { background: transparent; color: var(--branco); border-color: rgba(255,255,255,.50); }
+    .btn-white-outline:hover { background: rgba(255,255,255,.12); border-color: var(--branco); transform: translateY(-2px); }
+
+    .btn-azul { background: var(--azul); color: var(--branco); border-color: var(--azul); }
+    .btn-azul:hover { background: var(--azul-esc); border-color: var(--azul-esc); transform: translateY(-2px); }
+
+    /* ===== HEADER ===== */
+    #header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(10,10,10,0.97);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(240,146,43,0.14);
+      transition: background .3s;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .logo-link { display: flex; align-items: center; }
+    .logo-img  { height: 56px; width: auto; object-fit: contain; }
+
+    .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,.80);
+      font-family: var(--ff-c);
+      font-weight: 600;
+      font-size: 0.92rem;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: color .2s, background .2s;
+    }
+    .nav-links a:hover { color: var(--laranja); background: rgba(240,146,43,.10); }
+    .nav-cta { background: var(--laranja) !important; color: var(--branco) !important; border-radius: 6px !important; padding: 9px 20px !important; }
+    .nav-cta:hover { background: var(--laranja-esc) !important; color: var(--branco) !important; }
+
+    /* HAMBURGER */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 26px; height: 2.5px; background: var(--branco); border-radius: 2px; transition: transform .3s, opacity .3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+    #navMenu {
+      display: none; position: fixed;
+      top: 72px; left: 0; right: 0;
+      background: rgba(10,10,10,0.98);
+      backdrop-filter: blur(16px);
+      z-index: 999; padding: 20px 0 28px;
+      border-top: 1px solid rgba(240,146,43,0.14);
+    }
+    #navMenu.open { display: block; }
+    #navMenu ul { list-style: none; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    #navMenu a { display: block; color: rgba(255,255,255,.85); font-family: var(--ff-c); font-weight: 600; font-size: 1.08rem; letter-spacing: 1px; text-transform: uppercase; padding: 12px 32px; border-radius: 6px; transition: background .2s, color .2s; }
+    #navMenu a:hover { color: var(--laranja); background: rgba(240,146,43,.08); }
+    #navMenu .nav-cta-mob { background: var(--laranja) !important; color: var(--branco) !important; border-radius: 6px !important; margin-top: 8px; }
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 100vh;
+      background: var(--preto);
+      display: flex;
+      align-items: center;
+      padding-top: 72px;
+      position: relative;
+    }
+    #hero::before {
+      content: '';
+      position: absolute; top: -150px; right: -150px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(240,146,43,.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    #hero::after {
+      content: '';
+      position: absolute; bottom: -100px; left: -100px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(21,101,192,.10) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 64px;
+      position: relative; z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(240,146,43,.14);
+      border: 1px solid rgba(240,146,43,.33);
+      color: var(--laranja-cla);
+      font-family: var(--ff-c);
+      font-size: 0.80rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+    .hero-badge i { color: var(--laranja); font-size: 0.75rem; }
+
+    .hero-text h1 {
+      font-family: var(--ff-d);
+      font-size: clamp(3.8rem, 7vw, 6.5rem);
+      color: var(--branco);
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+      line-height: 0.95;
+    }
+    .hero-text h1 span { color: var(--laranja); }
+
+    .hero-slogan {
+      font-family: var(--ff-c);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: rgba(255,255,255,.72);
+      font-weight: 600;
+      letter-spacing: .5px;
+      margin: 14px 0 10px;
+      text-transform: uppercase;
+    }
+
+    .hero-desc {
+      color: rgba(255,255,255,.58);
+      font-size: 1rem;
+      margin-bottom: 36px;
+      line-height: 1.78;
+      max-width: 520px;
+    }
+
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .hero-stats {
+      display: flex;
+      gap: 28px;
+      margin-top: 44px;
+      padding-top: 36px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      flex-wrap: wrap;
+    }
+    .hero-stat strong {
+      display: block;
+      font-family: var(--ff-d);
+      font-size: 2.4rem;
+      color: var(--laranja);
+      line-height: 1;
+    }
+    .hero-stat span {
+      font-family: var(--ff-c);
+      font-size: 0.80rem;
+      color: rgba(255,255,255,.50);
+      letter-spacing: .5px;
+    }
+    .hero-divider { width: 1px; background: rgba(255,255,255,.10); align-self: stretch; }
+
+    /* Hero visual */
+    .hero-visual { display: flex; justify-content: center; align-items: center; }
+    .hero-logo-wrap { position: relative; }
+
+    .hero-logo-glow {
+      position: absolute; inset: -50px;
+      background: radial-gradient(circle, rgba(240,146,43,.16) 0%, transparent 68%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-logo-card {
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(240,146,43,.18);
+      border-radius: 20px;
+      padding: 40px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 32px 80px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.05);
+      position: relative; z-index: 1;
+      animation: floatCard 5s ease-in-out infinite;
+    }
+    .hero-logo-card img { width: 240px; height: auto; margin: 0 auto; }
+
+    .hero-float {
+      position: absolute;
+      background: var(--cinza-escuro);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 10px;
+      padding: 10px 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.4);
+      display: flex; align-items: center; gap: 8px;
+      font-family: var(--ff-c);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--branco);
+      white-space: nowrap;
+      z-index: 2;
+    }
+    .hero-float i { color: var(--laranja); }
+    .hero-float-1 { top: -14px; right: -22px; }
+    .hero-float-2 { bottom: -14px; left: -22px; }
+
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-10px); }
+    }
+
+    /* ===== STATS BAR ===== */
+    .stats-bar {
+      background: linear-gradient(135deg, var(--laranja) 0%, #D47F20 100%);
+    }
+    .stats-bar-inner {
+      display: flex;
+      justify-content: space-around;
+      align-items: stretch;
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 26px 20px;
+      flex: 1; min-width: 130px;
+      border-right: 1px solid rgba(255,255,255,.20);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-item i { font-size: 1.6rem; color: var(--branco); margin-bottom: 6px; }
+    .stat-item span {
+      font-family: var(--ff-c);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.82);
+    }
+
+    /* ===== SOBRE ===== */
+    #sobre { background: var(--cinza-claro); }
+
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .sobre-visual { position: relative; }
+
+    .sobre-card {
+      background: var(--preto);
+      border-radius: 20px;
+      padding: 48px 40px;
+      text-align: center;
+      box-shadow: 0 24px 64px rgba(0,0,0,.22);
+      position: relative;
+      overflow: hidden;
+    }
+    .sobre-card::before {
+      content: '';
+      position: absolute; top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      background: radial-gradient(circle, rgba(240,146,43,.13) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .sobre-card img { width: 160px; height: auto; margin: 0 auto 20px; position: relative; z-index: 1; }
+    .sobre-card p {
+      color: rgba(255,255,255,.65);
+      font-style: italic;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      position: relative; z-index: 1;
+    }
+
+    .sobre-fundacao {
+      position: absolute;
+      top: -16px; right: -16px;
+      background: var(--laranja);
+      color: var(--branco);
+      border-radius: 12px;
+      padding: 14px 20px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(240,146,43,.40);
+    }
+    .sobre-fundacao strong {
+      display: block;
+      font-family: var(--ff-d);
+      font-size: 2.4rem;
+      line-height: 1;
+    }
+    .sobre-fundacao span {
+      font-family: var(--ff-c);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: .88;
+    }
+
+    .sobre-text .section-tag { margin: 0 0 12px; }
+    .sobre-text .section-title { text-align: left; }
+    .sobre-text p { color: var(--texto-leve); font-size: 1.01rem; margin-bottom: 15px; line-height: 1.8; }
+
+    .sobre-destaque {
+      background: var(--branco);
+      border-left: 4px solid var(--laranja);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+      margin: 22px 0 28px;
+      color: var(--texto);
+      font-weight: 600;
+      font-size: 0.97rem;
+      font-style: italic;
+    }
+
+    .chips { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; }
+    .chip {
+      display: flex; align-items: center; gap: 8px;
+      background: var(--branco);
+      border: 1px solid var(--cinza);
+      border-radius: 50px;
+      padding: 7px 14px;
+      font-family: var(--ff-c);
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--texto);
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    }
+    .chip i { color: var(--laranja); }
+
+    /* ===== MVV ===== */
+    #mvv {
+      background: linear-gradient(180deg, var(--preto-soft) 0%, #1C1C1C 100%);
+      position: relative;
+    }
+    #mvv::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f0922b' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E") repeat;
+      pointer-events: none;
+    }
+
+    .mvv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      position: relative; z-index: 1;
+    }
+    .mvv-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      padding: 36px 26px;
+      transition: background .25s, border-color .25s, transform .25s;
+    }
+    .mvv-card:hover { background: rgba(255,255,255,.07); border-color: rgba(240,146,43,.28); transform: translateY(-4px); }
+    .mvv-icon {
+      width: 56px; height: 56px;
+      background: var(--laranja);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; color: var(--branco);
+      margin-bottom: 18px;
+      box-shadow: 0 6px 20px rgba(240,146,43,.35);
+    }
+    .mvv-card h3 {
+      font-family: var(--ff-d);
+      font-size: 1.5rem;
+      color: var(--branco);
+      margin-bottom: 12px;
+      letter-spacing: .5px;
+    }
+    .mvv-card p { color: rgba(255,255,255,.62); font-size: 0.93rem; line-height: 1.75; }
+
+    .mvv-valores {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+      position: relative; z-index: 1;
+    }
+    .valor-item {
+      display: flex; align-items: flex-start; gap: 12px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 10px;
+      padding: 18px;
+      transition: border-color .2s;
+    }
+    .valor-item:hover { border-color: rgba(240,146,43,.22); }
+    .valor-dot { width: 10px; height: 10px; min-width: 10px; background: var(--laranja); border-radius: 50%; margin-top: 6px; }
+    .valor-item h4 { font-family: var(--ff-c); font-size: 0.93rem; font-weight: 700; color: var(--laranja-cla); margin-bottom: 3px; letter-spacing: .3px; }
+    .valor-item p { color: rgba(255,255,255,.52); font-size: 0.84rem; line-height: 1.6; }
+
+    /* ===== SERVIÇOS ===== */
+    #servicos { background: var(--branco); }
+
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+    .servico-card {
+      background: var(--cinza-claro);
+      border-radius: var(--radius);
+      padding: 30px 20px;
+      text-align: center;
+      border: 1px solid var(--cinza);
+      border-bottom: 3px solid transparent;
+      transition: border-bottom-color .25s, box-shadow .25s, transform .25s;
+    }
+    .servico-card:hover { border-bottom-color: var(--laranja); box-shadow: var(--sombra); transform: translateY(-4px); }
+
+    .servico-icon {
+      width: 62px; height: 62px;
+      background: linear-gradient(135deg, var(--preto) 0%, var(--cinza-escuro) 100%);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+      font-size: 1.4rem; color: var(--laranja);
+      box-shadow: 0 6px 16px rgba(0,0,0,.14);
+      transition: background .25s;
+    }
+    .servico-card:hover .servico-icon { background: linear-gradient(135deg, var(--laranja) 0%, var(--laranja-esc) 100%); }
+    .servico-card:hover .servico-icon i { color: var(--branco); }
+
+    .servico-card h3 { font-family: var(--ff-c); font-size: 0.98rem; font-weight: 700; color: var(--texto); margin-bottom: 8px; }
+    .servico-card p  { color: var(--texto-leve); font-size: 0.86rem; line-height: 1.65; }
+
+    /* ===== PRODUTOS ===== */
+    #produtos {
+      background: linear-gradient(180deg, var(--preto) 0%, var(--cinza-escuro) 100%);
+    }
+    .produtos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .produto-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      padding: 32px 22px;
+      text-align: center;
+      transition: background .25s, border-color .25s, transform .25s;
+    }
+    .produto-card:hover { background: rgba(240,146,43,.07); border-color: rgba(240,146,43,.32); transform: translateY(-4px); }
+
+    .produto-icon {
+      width: 68px; height: 68px;
+      background: rgba(240,146,43,.11);
+      border: 1px solid rgba(240,146,43,.22);
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+      font-size: 1.65rem; color: var(--laranja);
+    }
+    .produto-card h3 { font-family: var(--ff-c); font-size: 1.05rem; font-weight: 700; color: var(--branco); margin-bottom: 8px; }
+    .produto-card p  { color: rgba(255,255,255,.52); font-size: 0.87rem; line-height: 1.65; }
+
+    .produto-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: rgba(39,174,96,.13);
+      color: #6FCF97;
+      font-family: var(--ff-c);
+      font-size: 0.73rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      padding: 4px 12px; border-radius: 50px; margin-top: 12px;
+    }
+
+    /* ===== GALERIA ===== */
+    #galeria { background: var(--cinza-claro); }
+
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .galeria-item {
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: var(--cinza-escuro);
+      position: relative;
+    }
+    .galeria-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+    .galeria-item:hover img { transform: scale(1.05); }
+
+    .galeria-placeholder {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+      color: rgba(255,255,255,.22);
+      background: linear-gradient(135deg, #1A1A1A 0%, #262626 100%);
+    }
+    .galeria-placeholder i    { font-size: 2rem; }
+    .galeria-placeholder span { font-family: var(--ff-c); font-size: 0.83rem; letter-spacing: 1px; }
+
+    /* ===== DEPOIMENTOS ===== */
+    #depoimentos {
+      background: linear-gradient(180deg, var(--preto-soft) 0%, var(--preto) 100%);
+    }
+    .depoimentos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .dep-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      padding: 30px 22px;
+      transition: background .25s, border-color .25s;
+    }
+    .dep-card:hover { background: rgba(255,255,255,.07); border-color: rgba(240,146,43,.24); }
+
+    .dep-stars { display: flex; gap: 4px; color: var(--laranja); margin-bottom: 14px; }
+    .dep-texto { color: rgba(255,255,255,.70); font-style: italic; font-size: 0.95rem; line-height: 1.75; margin-bottom: 18px; }
+
+    .dep-cliente { display: flex; align-items: center; gap: 12px; }
+    .dep-avatar {
+      width: 44px; height: 44px; min-width: 44px;
+      background: var(--laranja);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--ff-d);
+      font-size: 1.1rem;
+      color: var(--branco);
+    }
+    .dep-info strong { display: block; font-family: var(--ff-c); font-size: 0.9rem; font-weight: 700; color: var(--branco); }
+    .dep-info span   { font-size: 0.8rem; color: rgba(255,255,255,.42); }
+
+    /* ===== CONTATO ===== */
+    #contato { background: var(--cinza-claro); }
+
+    .contato-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .contato-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 18px; }
+    .contato-icon {
+      width: 46px; height: 46px; min-width: 46px;
+      background: var(--preto);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.05rem; color: var(--laranja);
+    }
+    .contato-item-text strong {
+      display: block;
+      font-family: var(--ff-c);
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--laranja); margin-bottom: 3px;
+    }
+    .contato-item-text p, .contato-item-text a { color: var(--texto); font-size: 0.97rem; line-height: 1.6; }
+    .contato-item-text a:hover { color: var(--laranja); }
+
+    .wpp-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 18px 0;
+    }
+    .wpp-card {
+      background: var(--branco);
+      border: 1px solid var(--cinza);
+      border-radius: 10px;
+      padding: 14px;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .wpp-card:hover { box-shadow: 0 6px 20px rgba(37,211,102,.15); transform: translateY(-2px); }
+    .wpp-card-label { font-family: var(--ff-c); font-size: 0.73rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--texto-leve); margin-bottom: 5px; }
+    .wpp-card a { display: flex; align-items: center; gap: 7px; color: #25d366; font-family: var(--ff-c); font-weight: 700; font-size: 0.98rem; }
+    .wpp-card a:hover { opacity: .8; }
+
+    .horario-box { background: var(--preto); border-radius: var(--radius); padding: 22px; margin-top: 18px; }
+    .horario-box h4 { font-family: var(--ff-c); font-size: 0.85rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--laranja); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .horario-linha { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,.07); font-size: 0.9rem; }
+    .horario-linha:last-of-type { border-bottom: none; }
+    .horario-linha span { color: rgba(255,255,255,.62); }
+    .horario-linha strong { color: var(--branco); font-weight: 700; }
+
+    .plantao-badge {
+      display: flex; align-items: center; gap: 10px;
+      background: rgba(39,174,96,.11);
+      border: 1px solid rgba(39,174,96,.23);
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-top: 10px;
+    }
+    .plantao-dot {
+      width: 8px; height: 8px;
+      background: var(--verde);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--verde);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+    .plantao-badge span { color: #6FCF97; font-family: var(--ff-c); font-size: 0.84rem; font-weight: 600; }
+
+    .redes { display: flex; gap: 10px; margin-top: 20px; }
+    .social-btn {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; color: var(--branco);
+      transition: transform .2s, opacity .2s;
+    }
+    .social-btn:hover { transform: translateY(-3px); opacity: .88; }
+    .social-btn.instagram { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+    .social-btn.whatsapp  { background: #25d366; }
+
+    .mapa-wrap { border-radius: var(--radius); overflow: hidden; box-shadow: var(--sombra); border: 1px solid var(--cinza); }
+    .mapa-wrap iframe { width: 100%; height: 330px; display: block; border: none; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #060606;
+      color: rgba(255,255,255,.62);
+      padding: 56px 0 0;
+      border-top: 1px solid rgba(240,146,43,.10);
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 40px;
+    }
+    .footer-brand img { height: 68px; width: auto; margin-bottom: 14px; }
+    .footer-brand p   { font-size: 0.87rem; line-height: 1.75; max-width: 290px; margin-bottom: 18px; }
+
+    .footer-col h4 {
+      font-family: var(--ff-c);
+      font-size: 0.84rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--laranja); margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { color: rgba(255,255,255,.58); font-size: 0.88rem; transition: color .2s; display: flex; align-items: center; gap: 8px; }
+    .footer-col ul li a:hover { color: var(--laranja); }
+    .footer-col ul li a i { font-size: 0.78rem; color: var(--laranja); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.06);
+      padding: 18px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .footer-bottom p { font-size: 0.81rem; }
+
+    /* ===== FLUTUANTES ===== */
+    .whatsapp-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 990;
+      width: 56px; height: 56px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; color: var(--branco);
+      box-shadow: 0 4px 20px rgba(37,211,102,.40);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(37,211,102,.55); }
+    .whatsapp-float:focus-visible { outline: 3px solid #25d366; outline-offset: 3px; }
+
+    .scroll-top {
+      position: fixed; bottom: 92px; right: 28px; z-index: 990;
+      width: 44px; height: 44px;
+      background: var(--laranja); color: var(--branco);
+      border-radius: 50%;
+      display: none; align-items: center; justify-content: center;
+      font-size: 1rem; border: none; cursor: pointer;
+      box-shadow: 0 4px 16px rgba(240,146,43,.35);
+      transition: transform .2s;
+    }
+    .scroll-top:hover { transform: translateY(-3px); }
+    .scroll-top.visible { display: flex; }
+
+    .scroll-progress {
+      position: fixed; top: 0; left: 0;
+      height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--laranja), var(--laranja-cla));
+      z-index: 2000;
+      transition: width .08s linear;
+    }
+
+    /* ===== ANIMAÇÕES ===== */
+    .fade-up   { opacity: 0; transform: translateY(28px);  transition: opacity .65s ease, transform .65s ease; }
+    .fade-left { opacity: 0; transform: translateX(-40px); transition: opacity .70s ease, transform .70s ease; }
+    .fade-right{ opacity: 0; transform: translateX(40px);  transition: opacity .70s ease, transform .70s ease; }
+    .fade-scale{ opacity: 0; transform: scale(.88);        transition: opacity .60s ease, transform .60s ease; }
+    .fade-up.visible, .fade-left.visible, .fade-right.visible, .fade-scale.visible {
+      opacity: 1; transform: none;
+    }
+
+    /* ===== RESPONSIVIDADE ===== */
+    @media (min-width: 1800px) { .container { max-width: 1440px; } }
+
+    @media (max-width: 1280px) {
+      .hero-grid { gap: 48px; }
+      .servicos-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 1024px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+      .hero-btns { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .hero-visual { order: -1; }
+      .hero-desc { margin: 0 auto 36px; }
+      .hero-float { display: none; }
+
+      .sobre-grid { grid-template-columns: 1fr; gap: 40px; }
+      .sobre-text .section-tag { margin: 0 auto 12px; }
+      .sobre-text .section-title { text-align: center; }
+      .sobre-text p { text-align: center; }
+      .sobre-destaque { border-left: none; border-top: 4px solid var(--laranja); border-radius: 10px; text-align: center; }
+      .chips { justify-content: center; }
+      .sobre-text .btn { display: block; width: fit-content; margin: 0 auto; }
+
+      .mvv-grid    { grid-template-columns: 1fr 1fr; }
+      .mvv-valores { grid-template-columns: 1fr 1fr; }
+
+      .produtos-grid     { grid-template-columns: 1fr 1fr; }
+      .galeria-grid      { grid-template-columns: 1fr 1fr; }
+      .depoimentos-grid  { grid-template-columns: 1fr 1fr; }
+      .contato-grid      { grid-template-columns: 1fr; gap: 40px; }
+      .footer-inner      { grid-template-columns: 1fr 1fr; }
+
+      .stats-bar-inner .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.15); padding: 18px; }
+      .stats-bar-inner .stat-item:last-child { border-bottom: none; }
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 72px 0; }
+      .hero-logo-card { padding: 28px; }
+      .hero-logo-card img { width: 180px; }
+      .mvv-grid    { grid-template-columns: 1fr; }
+      .mvv-valores { grid-template-columns: 1fr; }
+      .depoimentos-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer-brand p { max-width: 100%; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 599px) {
+      section { padding: 60px 0; }
+      .container { padding: 0 1.25rem; }
+      .hero-logo-card { padding: 24px; }
+      .hero-logo-card img { width: 150px; }
+      .hero-stats { gap: 16px; }
+      .hero-stat strong { font-size: 2rem; }
+      .servicos-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .servico-card { padding: 22px 14px; }
+      .produtos-grid { grid-template-columns: 1fr 1fr; }
+      .galeria-grid  { grid-template-columns: 1fr 1fr; }
+      .wpp-cards { grid-template-columns: 1fr; }
+      .whatsapp-float { bottom: 20px; right: 20px; }
+      .scroll-top     { bottom: 84px; right: 20px; }
+    }
+
+    @media (max-width: 480px) {
+      section { padding: 52px 0; }
+      .container { padding: 0 1rem; }
+      .hero-logo-card img { width: 130px; }
+      .servicos-grid { grid-template-columns: 1fr; }
+      .produtos-grid { grid-template-columns: 1fr; }
+      .galeria-grid  { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 360px) {
+      .container { padding: 0 0.875rem; }
+      section { padding: 44px 0; }
+      .hero-btns { flex-direction: column; }
+      .hero-btns .btn { width: 100%; justify-content: center; }
+    }
+
+    @media (max-height: 500px) and (orientation: landscape) {
+      #hero { min-height: auto; padding: calc(72px + 1rem) 0 2rem; }
+      .hero-logo-card { padding: 16px; }
+      .hero-logo-card img { width: 100px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up, .fade-left, .fade-right, .fade-scale { transition: none; opacity: 1; transform: none; }
+      .hero-logo-card { animation: none; }
+      .scroll-progress { transition: none; }
+      .plantao-dot { animation: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header" role="banner">
+    <div class="container header-inner">
+      <a href="#hero" class="logo-link" aria-label="Mecânica Mella — página inicial">
+        <img src="images/logo.png" alt="Mecânica Mella logotipo" class="logo-img">
+      </a>
+      <nav role="navigation" aria-label="Menu principal">
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li>
+            <a href="https://wa.me/5549989007456" target="_blank" rel="noopener noreferrer" class="nav-cta">
+              <i class="fa-brands fa-whatsapp"></i> Orçamento
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MENU MOBILE -->
+  <nav id="navMenu" aria-label="Menu mobile" role="navigation">
+    <ul>
+      <li><a href="#sobre"    class="nav-mob-link">Sobre</a></li>
+      <li><a href="#servicos" class="nav-mob-link">Serviços</a></li>
+      <li><a href="#produtos" class="nav-mob-link">Produtos</a></li>
+      <li><a href="#galeria"  class="nav-mob-link">Galeria</a></li>
+      <li><a href="#contato"  class="nav-mob-link">Contato</a></li>
+      <li>
+        <a href="https://wa.me/5549989007456" target="_blank" rel="noopener noreferrer" class="nav-mob-link nav-cta-mob">
+          <i class="fa-brands fa-whatsapp"></i> Solicitar orçamento
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" aria-label="Apresentação">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <i class="fa-solid fa-gear"></i>
+          Especialistas em veículos pesados — Maravilha/SC
+        </div>
+        <h1>Mecânica<br><span>Mella</span></h1>
+        <p class="hero-slogan">Trabalho com honestidade e agilidade!</p>
+        <p class="hero-desc">
+          Especializados em suspensão, freios, linha amarela e reforma de carretas.
+          Os irmãos Mella uniram anos de experiência para oferecer o melhor serviço
+          da região com qualidade, agilidade e preço justo para caminhões, carretas e máquinas.
+        </p>
+        <div class="hero-btns">
+          <a href="https://wa.me/5549989007456" target="_blank" rel="noopener noreferrer" class="btn btn-laranja">
+            <i class="fa-brands fa-whatsapp"></i> Solicitar orçamento
+          </a>
+          <a href="#servicos" class="btn btn-white-outline">
+            Nossos serviços <i class="fa-solid fa-arrow-down"></i>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <strong>2024</strong>
+            <span>Fundada em</span>
+          </div>
+          <div class="hero-divider"></div>
+          <div class="hero-stat">
+            <strong>8+</strong>
+            <span>Tipos de serviço</span>
+          </div>
+          <div class="hero-divider"></div>
+          <div class="hero-stat">
+            <strong>24h</strong>
+            <span>Plantão/socorro</span>
+          </div>
+          <div class="hero-divider"></div>
+          <div class="hero-stat">
+            <strong>100%</strong>
+            <span>Comprometidos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-logo-wrap">
+          <div class="hero-logo-glow"></div>
+          <div class="hero-logo-card">
+            <img src="images/logo.png" alt="Mecânica Mella — caminhão e engrenagem">
+          </div>
+          <div class="hero-float hero-float-1">
+            <i class="fa-solid fa-wrench"></i> Suspensão & freios
+          </div>
+          <div class="hero-float hero-float-2">
+            <i class="fa-solid fa-tractor"></i> Linha amarela
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS BAR ===== -->
+  <div class="stats-bar" role="region" aria-label="Diferenciais rápidos">
+    <div class="stats-bar-inner">
+      <div class="stat-item">
+        <i class="fa-solid fa-truck"></i>
+        <span>Caminhões e carretas</span>
+      </div>
+      <div class="stat-item">
+        <i class="fa-solid fa-tractor"></i>
+        <span>Linha amarela</span>
+      </div>
+      <div class="stat-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <span>Garantia no serviço</span>
+      </div>
+      <div class="stat-item">
+        <i class="fa-solid fa-clock"></i>
+        <span>Plantão & socorro</span>
+      </div>
+      <div class="stat-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Maravilha — SC</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SOBRE ===== -->
+  <section id="sobre" aria-labelledby="sobre-titulo">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-visual fade-left">
+          <div class="sobre-card">
+            <img src="images/logo.png" alt="Mecânica Mella">
+            <p>"Honestidade e agilidade em cada serviço prestado — do motor à suspensão, do freio ao rodante."</p>
+          </div>
+          <div class="sobre-fundacao">
+            <strong>NOV</strong>
+            <span>Fundada em 2024</span>
+          </div>
+        </div>
+
+        <div class="sobre-text fade-right">
+          <span class="section-tag section-tag-left">Quem somos</span>
+          <h2 id="sobre-titulo" class="section-title">Uma história construída com experiência e determinação</h2>
+          <p>
+            A Mecânica Mella nasceu em novembro de 2024 após os irmãos Mella acumularem anos de experiência
+            trabalhando como profissionais na linha pesada. Unidos pelo sonho de ter o próprio negócio, deram
+            o passo de empreender com tudo que aprenderam.
+          </p>
+          <p>
+            Com dedicação, cuidado e os clientes já conquistados ao longo dos anos, a Mecânica Mella atende com
+            honestidade e agilidade, buscando sempre a satisfação total em qualidade e condições financeiras
+            equilibradas para auxiliar em tantos altos e baixos da economia brasileira.
+          </p>
+          <div class="sobre-destaque">
+            "Nosso objetivo é deixar todos satisfeitos — serviço de qualidade com preços que cabem no bolso."
+          </div>
+          <div class="chips">
+            <div class="chip"><i class="fa-solid fa-users"></i> Irmãos Mella</div>
+            <div class="chip"><i class="fa-solid fa-star"></i> Anos de experiência</div>
+            <div class="chip"><i class="fa-solid fa-handshake"></i> Confiança comprovada</div>
+          </div>
+          <a href="https://wa.me/5549989007456" target="_blank" rel="noopener noreferrer" class="btn btn-laranja">
+            <i class="fa-brands fa-whatsapp"></i> Fale conosco
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MVV ===== -->
+  <section id="mvv" aria-labelledby="mvv-titulo">
+    <div class="container">
+      <span class="section-tag section-tag-dark fade-up">Nossa essência</span>
+      <h2 id="mvv-titulo" class="section-title section-title-dark fade-up">Missão, visão e valores</h2>
+      <p class="section-desc section-desc-dark fade-up">Os princípios que guiam cada serviço e cada cliente atendido pela Mecânica Mella.</p>
+
+      <div class="mvv-grid">
+        <div class="mvv-card fade-scale">
+          <div class="mvv-icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3>Missão</h3>
+          <p>Prestar serviços especializados em manutenção de veículos pesados com excelência, agilidade e confiança, garantindo segurança, desempenho e durabilidade para nossos clientes.</p>
+        </div>
+        <div class="mvv-card fade-scale">
+          <div class="mvv-icon"><i class="fa-solid fa-binoculars"></i></div>
+          <h3>Visão</h3>
+          <p>Ser reconhecida como referência em mecânica pesada na região, destacando-se pela qualidade dos serviços, inovação constante e compromisso com a satisfação total dos clientes.</p>
+        </div>
+        <div class="mvv-card fade-scale">
+          <div class="mvv-icon"><i class="fa-solid fa-gem"></i></div>
+          <h3>Valores</h3>
+          <p>Compromisso, qualidade, honestidade, responsabilidade, profissionalismo e respeito — os pilares que definem cada atendimento e cada serviço que prestamos.</p>
+        </div>
+      </div>
+
+      <div class="mvv-valores">
+        <div class="valor-item fade-up">
+          <div class="valor-dot"></div>
+          <div><h4>Compromisso com o cliente</h4><p>Atendimento próximo, confiável e eficiente</p></div>
+        </div>
+        <div class="valor-item fade-up">
+          <div class="valor-dot"></div>
+          <div><h4>Qualidade e excelência</h4><p>Serviços feitos com alto padrão técnico</p></div>
+        </div>
+        <div class="valor-item fade-up">
+          <div class="valor-dot"></div>
+          <div><h4>Honestidade e transparência</h4><p>Orçamentos claros e diagnósticos precisos</p></div>
+        </div>
+        <div class="valor-item fade-up">
+          <div class="valor-dot"></div>
+          <div><h4>Responsabilidade</h4><p>Cumprimento de prazos e segurança em primeiro lugar</p></div>
+        </div>
+        <div class="valor-item fade-up">
+          <div class="valor-dot"></div>
+          <div><h4>Profissionalismo</h4><p>Equipe qualificada e dedicada ao cliente</p></div>
+        </div>
+        <div class="valor-item fade-up">
+          <div class="valor-dot"></div>
+          <div><h4>Respeito</h4><p>Valorização de pessoas, clientes e meio ambiente</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVIÇOS ===== -->
+  <section id="servicos" aria-labelledby="servicos-titulo">
+    <div class="container">
+      <span class="section-tag fade-up">O que fazemos</span>
+      <h2 id="servicos-titulo" class="section-title fade-up">Nossos serviços</h2>
+      <p class="section-desc fade-up">Serviços especializados em mecânica pesada com qualidade, agilidade e preço justo para caminhões, carretas e linha amarela.</p>
+
+      <div class="servicos-grid">
+        <div class="servico-card fade-up">
+          <div class="servico-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+          <h3>Suspensão em geral</h3>
+          <p>Diagnóstico e reparo completo em sistemas de suspensão de caminhões e carretas.</p>
+        </div>
+        <div class="servico-card fade-up">
+          <div class="servico-icon"><i class="fa-solid fa-circle-stop"></i></div>
+          <h3>Sistema de freios</h3>
+          <p>Manutenção preventiva e corretiva em freios de veículos pesados com total segurança.</p>
+        </div>
+        <div class="servico-card fade-up">
+          <div class="servico-icon"><i class="fa-solid fa-layer-group"></i></div>
+          <h3>Feixes de molas</h3>
+          <p>Troca, reforma e alinhamento de feixes de molas para todo tipo de veículo pesado.</p>
+        </div>
+        <div class="servico-card fade-up">
+          <div class="servico-icon"><i class="fa-solid fa-circle-dot"></i></div>
+          <h3>Cubos e rodantes</h3>
+          <p>Revisão, limpeza, montagem e troca de cubos e rodantes com peças de qualidade.</p>
+        </div>
+        <div class="servico-card fade-up">
+          <div class="servico-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+          <h3>Soldas em geral</h3>
+          <p>Serviços de solda em chassis, baús, estruturas metálicas e componentes pesados.</p>
+        </div>
+        <div class="servico-card fade-up">
+          <div class="servico-icon"><i class="fa-solid fa-hammer"></i></div>
+          <h3>Reforma de assoalhos</h3>
+          <p>Troca e reforma de assoalhos e tampas de carretas com materiais de alta durabilidade.</p>
+        </div>
+        <div class="servico-card fade-up">
+          <div class="servico-icon"><i class="fa-solid fa-tractor"></i></div>
+          <h3>Conchas linha amarela</h3>
+          <p>Produção e manutenção de conchas e acessórios para escavadeiras e máquinas pesadas.</p>
+        </div>
+        <div class="servico-card fade-up">
+          <div class="servico-icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <h3>Socorro mecânico</h3>
+          <p>Plantão e socorro emergencial disponível. Consulte disponibilidade pelo WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUTOS ===== -->
+  <section id="produtos" aria-labelledby="produtos-titulo">
+    <div class="container">
+      <span class="section-tag section-tag-dark fade-up">Peças & componentes</span>
+      <h2 id="produtos-titulo" class="section-title section-title-dark fade-up">Nossos produtos</h2>
+      <p class="section-desc section-desc-dark fade-up">Trabalhamos com peças de qualidade para garantir durabilidade e desempenho aos seus veículos pesados.</p>
+
+      <div class="produtos-grid">
+        <div class="produto-card fade-scale">
+          <div class="produto-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+          <h3>Peças de suspensão</h3>
+          <p>Suspensão completa: molas, amortecedores, braços, buchas e todos os componentes essenciais.</p>
+          <div class="produto-badge"><i class="fa-solid fa-check"></i> Pronta entrega</div>
+        </div>
+        <div class="produto-card fade-scale">
+          <div class="produto-icon"><i class="fa-solid fa-circle-stop"></i></div>
+          <h3>Freios e componentes</h3>
+          <p>Lonas, tambores, cilindros, câmaras de ar e componentes completos do sistema de freios.</p>
+          <div class="produto-badge"><i class="fa-solid fa-check"></i> Pronta entrega</div>
+        </div>
+        <div class="produto-card fade-scale">
+          <div class="produto-icon"><i class="fa-solid fa-circle-dot"></i></div>
+          <h3>Rodantes</h3>
+          <p>Rodas, rolamentos e todos os componentes para manutenção e troca de rodantes pesados.</p>
+          <div class="produto-badge"><i class="fa-solid fa-check"></i> Consulte estoque</div>
+        </div>
+        <div class="produto-card fade-scale">
+          <div class="produto-icon"><i class="fa-solid fa-tractor"></i></div>
+          <h3>Conchas linha amarela</h3>
+          <p>Conchas de escavadeiras, caçambas e acessórios produzidos e reparados sob medida.</p>
+          <div class="produto-badge"><i class="fa-solid fa-check"></i> Sob encomenda</div>
+        </div>
+        <div class="produto-card fade-scale">
+          <div class="produto-icon"><i class="fa-solid fa-toolbox"></i></div>
+          <h3>Acessórios pesados</h3>
+          <p>Acessórios e componentes variados para linha amarela e veículos pesados em geral.</p>
+          <div class="produto-badge"><i class="fa-solid fa-check"></i> Consulte estoque</div>
+        </div>
+        <div class="produto-card fade-scale">
+          <div class="produto-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <h3>Materiais para reforma</h3>
+          <p>Assoalhos, madeiras, chapas metálicas e materiais para reforma e troca em carretas.</p>
+          <div class="produto-badge"><i class="fa-solid fa-check"></i> Consulte disponibilidade</div>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:48px">
+        <a href="https://wa.me/5549989007456" target="_blank" rel="noopener noreferrer" class="btn btn-laranja">
+          <i class="fa-brands fa-whatsapp"></i> Consultar peças e preços
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERIA ===== -->
+  <section id="galeria" aria-labelledby="galeria-titulo">
+    <div class="container">
+      <span class="section-tag fade-up">Nossa galeria</span>
+      <h2 id="galeria-titulo" class="section-title fade-up">Trabalhos realizados</h2>
+      <p class="section-desc fade-up">Confira alguns dos nossos serviços e a estrutura da Mecânica Mella.</p>
+
+      <div class="galeria-grid">
+        <div class="galeria-item fade-scale">
+          <img src="images/foto-1.jpg" alt="Mecânica Mella — serviço realizado 1"
+               onerror="this.parentElement.innerHTML='<div class=\'galeria-placeholder\'><i class=\'fa-solid fa-image\'></i><span>Foto em breve</span></div>'">
+        </div>
+        <div class="galeria-item fade-scale">
+          <img src="images/foto-2.jpg" alt="Mecânica Mella — serviço realizado 2"
+               onerror="this.parentElement.innerHTML='<div class=\'galeria-placeholder\'><i class=\'fa-solid fa-image\'></i><span>Foto em breve</span></div>'">
+        </div>
+        <div class="galeria-item fade-scale">
+          <img src="images/foto-3.jpg" alt="Mecânica Mella — serviço realizado 3"
+               onerror="this.parentElement.innerHTML='<div class=\'galeria-placeholder\'><i class=\'fa-solid fa-image\'></i><span>Foto em breve</span></div>'">
+        </div>
+        <div class="galeria-item fade-scale">
+          <img src="images/foto-4.jpg" alt="Mecânica Mella — serviço realizado 4"
+               onerror="this.parentElement.innerHTML='<div class=\'galeria-placeholder\'><i class=\'fa-solid fa-image\'></i><span>Foto em breve</span></div>'">
+        </div>
+        <div class="galeria-item fade-scale">
+          <img src="images/foto-5.jpg" alt="Mecânica Mella — serviço realizado 5"
+               onerror="this.parentElement.innerHTML='<div class=\'galeria-placeholder\'><i class=\'fa-solid fa-image\'></i><span>Foto em breve</span></div>'">
+        </div>
+        <div class="galeria-item fade-scale">
+          <img src="images/foto-6.jpg" alt="Mecânica Mella — serviço realizado 6"
+               onerror="this.parentElement.innerHTML='<div class=\'galeria-placeholder\'><i class=\'fa-solid fa-image\'></i><span>Foto em breve</span></div>'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEPOIMENTOS ===== -->
+  <section id="depoimentos" aria-labelledby="dep-titulo">
+    <div class="container">
+      <span class="section-tag section-tag-dark fade-up">Depoimentos</span>
+      <h2 id="dep-titulo" class="section-title section-title-dark fade-up">O que nossos clientes dizem</h2>
+      <p class="section-desc section-desc-dark fade-up">A satisfação de cada cliente é o maior resultado do nosso trabalho.</p>
+
+      <div class="depoimentos-grid">
+        <div class="dep-card fade-up">
+          <div class="dep-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="dep-texto">"Serviço de qualidade e com a rapidez desejada. Adquiri aqui na mecânica com valores justos ao consumidor. Recomendo muito!"</p>
+          <div class="dep-cliente">
+            <div class="dep-avatar">C</div>
+            <div class="dep-info">
+              <strong>Cliente verificado</strong>
+              <span>Maravilha — SC</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dep-card fade-up">
+          <div class="dep-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="dep-texto">"Ótimo atendimento, profissionais qualificados e preço honesto. Voltarei sempre que meu caminhão precisar. Parabéns aos irmãos Mella!"</p>
+          <div class="dep-cliente">
+            <div class="dep-avatar">M</div>
+            <div class="dep-info">
+              <strong>Cliente verificado</strong>
+              <span>Interior de SC</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dep-card fade-up">
+          <div class="dep-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="dep-texto">"Suspensão da carreta resolvida em tempo recorde. Serviço limpo, preciso e com garantia. Encontrei o lugar certo para minha frota!"</p>
+          <div class="dep-cliente">
+            <div class="dep-avatar">R</div>
+            <div class="dep-info">
+              <strong>Cliente verificado</strong>
+              <span>Região de Maravilha — SC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section id="contato" aria-labelledby="contato-titulo">
+    <div class="container">
+      <span class="section-tag fade-up">Fale conosco</span>
+      <h2 id="contato-titulo" class="section-title fade-up">Entre em contato</h2>
+      <p class="section-desc fade-up">Solicite um orçamento, tire dúvidas ou agende um serviço. Estamos prontos para atender você!</p>
+
+      <div class="contato-grid">
+        <div class="fade-left">
+          <div class="contato-item">
+            <div class="contato-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contato-item-text">
+              <strong>Endereço</strong>
+              <p>Linha Mariporã, interior de Maravilha — SC</p>
+            </div>
+          </div>
+
+          <div class="contato-item">
+            <div class="contato-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contato-item-text">
+              <strong>E-mail</strong>
+              <p><a href="mailto:marcianomella@hotmail.com">marcianomella@hotmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="wpp-cards">
+            <div class="wpp-card">
+              <div class="wpp-card-label">Marciano</div>
+              <a href="https://wa.me/5549989007456" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp"></i> (49) 98900-7456
+              </a>
+            </div>
+            <div class="wpp-card">
+              <div class="wpp-card-label">Comercial</div>
+              <a href="https://wa.me/5549988783940" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp"></i> (49) 98878-3940
+              </a>
+            </div>
+          </div>
+
+          <div class="horario-box">
+            <h4><i class="fa-regular fa-clock"></i> Horário de atendimento</h4>
+            <div class="horario-linha">
+              <span>Segunda a sexta-feira</span>
+              <strong>08:00 – 18:00</strong>
+            </div>
+            <div class="horario-linha">
+              <span>Sábado</span>
+              <strong>08:00 – 12:00</strong>
+            </div>
+            <div class="plantao-badge">
+              <div class="plantao-dot"></div>
+              <span>Plantão e socorro — verifique disponibilidade pelo WhatsApp</span>
+            </div>
+          </div>
+
+          <div class="redes">
+            <a href="https://www.instagram.com/mecanicamella?igsh=MXc0MHRrNjQ1N2RraA==" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="Instagram da Mecânica Mella">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/5549989007456" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" aria-label="WhatsApp Mecânica Mella">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="fade-right">
+          <div class="mapa-wrap">
+            <iframe
+              src="https://maps.google.com/maps?q=Linha+Maripor%C3%A3,+Maravilha,+SC,+Brasil&output=embed&z=13"
+              title="Localização Mecânica Mella — Linha Mariporã, Maravilha/SC"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div style="margin-top:16px">
+            <a href="https://maps.app.goo.gl/TacK1S5zueG511wdA" target="_blank" rel="noopener noreferrer" class="btn btn-azul" style="width:100%; justify-content:center">
+              <i class="fa-solid fa-map-marker-alt"></i> Abrir no Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="Mecânica Mella logotipo">
+          <p>Especialistas em suspensão, freios, soldas e linha amarela em Maravilha/SC. Honestidade e agilidade em cada serviço.</p>
+          <div class="redes">
+            <a href="https://www.instagram.com/mecanicamella?igsh=MXc0MHRrNjQ1N2RraA==" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/5549989007456" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#sobre"><i class="fa-solid fa-chevron-right"></i> Sobre nós</a></li>
+            <li><a href="#servicos"><i class="fa-solid fa-chevron-right"></i> Serviços</a></li>
+            <li><a href="#produtos"><i class="fa-solid fa-chevron-right"></i> Produtos</a></li>
+            <li><a href="#galeria"><i class="fa-solid fa-chevron-right"></i> Galeria</a></li>
+            <li><a href="#contato"><i class="fa-solid fa-chevron-right"></i> Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul>
+            <li>
+              <a href="https://wa.me/5549989007456" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp"></i> (49) 98900-7456 — Marciano
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/5549988783940" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp"></i> (49) 98878-3940 — Comercial
+              </a>
+            </li>
+            <li>
+              <a href="mailto:marcianomella@hotmail.com">
+                <i class="fa-solid fa-envelope"></i> marcianomella@hotmail.com
+              </a>
+            </li>
+            <li>
+              <a href="https://maps.app.goo.gl/TacK1S5zueG511wdA" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-map-pin"></i> Linha Mariporã — Maravilha/SC
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Mecânica Mella · CNPJ 58.354.706/0001-31 · Maravilha — SC</p>
+        <p>Seg–Sex 08h–18h &nbsp;|&nbsp; Sáb 08h–12h</p>
+      </div>
+    </div>
+
+    <!-- Rodapé MonteSite - Atualização Automática -->
+    <div id="montesite-footer-badge"></div>
+    <script src="https://vaabpicspdbolvutnscp.supabase.co/functions/v1/get-footer-iframe"></script>
+  </footer>
+
+  <!-- Barra de progresso -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- WhatsApp flutuante -->
+  <a href="https://wa.me/5549989007456" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Falar pelo WhatsApp — Marciano">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Scroll top -->
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script>
+    // ===== HAMBURGER =====
+    const hamburger = document.getElementById('hamburgerBtn');
+    const navMenu   = document.getElementById('navMenu');
+    const navLinks  = navMenu.querySelectorAll('.nav-mob-link');
+
+    hamburger.addEventListener('click', () => {
+      const open = navMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open);
+    });
+    navLinks.forEach(l => l.addEventListener('click', () => {
+      navMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }));
+
+    // ===== SCROLL PROGRESS + TOP =====
+    const scrollBtn  = document.getElementById('scrollTopBtn');
+    const progressEl = document.getElementById('scrollProgress');
+
+    window.addEventListener('scroll', () => {
+      const s = window.scrollY;
+      const t = document.documentElement.scrollHeight - window.innerHeight;
+      progressEl.style.width = (s / t * 100) + '%';
+      scrollBtn.classList.toggle('visible', s > 400);
+    }, { passive: true });
+
+    scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ===== REVEAL ANIMATIONS =====
+    const animEls = document.querySelectorAll('.fade-up, .fade-left, .fade-right, .fade-scale');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.10 });
+    animEls.forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
