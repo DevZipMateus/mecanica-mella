@@ -207,7 +207,10 @@
     /* ===== HERO ===== */
     #hero {
       min-height: 100vh;
-      background: var(--preto);
+      background:
+        linear-gradient(rgba(8,8,8,0.78), rgba(10,10,10,0.80)),
+        url('images/mecanicacaminhao.jpg') center / cover no-repeat;
+      background-attachment: scroll, fixed;
       display: flex;
       align-items: center;
       padding-top: 72px;
@@ -921,7 +924,7 @@
 
     @media (max-width: 1024px) {
       /* Desativa parallax em iOS/Android */
-      #sobre, #servicos, #mvv, #depoimentos {
+      #hero, #sobre, #servicos, #mvv, #depoimentos {
         background-attachment: scroll, scroll;
       }
 
